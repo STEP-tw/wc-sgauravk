@@ -1,0 +1,22 @@
+{
+  "name": "wc-sgauravk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wc.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/STEP-tw/wc-sgauravk.git"
+  },
+  "author": "sgauravk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/STEP-tw/wc-sgauravk/issues"
+  },
+  "homepage": "https://github.com/STEP-tw/wc-sgauravk#readme",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
+}
