@@ -7,8 +7,7 @@ const splitByBytes = content => content.split('').length;
 const spaceGenerator = count => new Array(count).fill(' ').join('');
 
 const wordCount = function(content, fileName){
-  let result = '';
-  result += spaceGenerator(6);
+  let result = spaceGenerator(6);
   result += splitByLines(content);
   result += spaceGenerator(5)
   result += splitByWords(content);
