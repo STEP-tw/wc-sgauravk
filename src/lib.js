@@ -9,9 +9,9 @@ const spaceGenerator = count => new Array(count).fill(' ').join('');
 const getOptions = function(args){
   let result = [];
   let defaultCases = ['-lcw','-lwc','-clw','-cwl','-wlc','-wcl',''];
-  if (args.includes('-l')) result.push(splitByLines);
-  if (args.includes('-w')) result.push(splitByWords);
-  if (args.includes('-c')) result.push(splitByBytes);
+  if (args.join().includes('l')) result.push(splitByLines);
+  if (args.join().includes('w')) result.push(splitByWords);
+  if (args.join().includes('c')) result.push(splitByBytes);
   if (defaultCases.includes(args.join())) 
     result = [splitByLines, splitByWords, splitByBytes];
   return result;
