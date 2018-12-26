@@ -29,3 +29,14 @@
   node ./wc.js -c -w -l file1 [file2]...
   node ./wc.js -c -l -w file1 [file2]...
 */
+
+const fs = require('fs');
+const { wordCount } = require('./src/lib.js');
+
+const main = function(){
+  let fileName = process.argv[2];
+  let content = fs.readFileSync(fileName, 'utf8');
+  console.log(wordCount(content, fileName));
+}
+
+main();
