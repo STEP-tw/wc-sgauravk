@@ -7,7 +7,7 @@ const main = function(){
   let filesList = parseInput(userArgs);
   userArgs.splice(userArgs.length - filesList.length);
   let content = fs.readFileSync(filesList[0], 'utf8');
-  console.log(wordCount(content, filesList[0]));
+  console.log(wordCount(content, filesList[0], userArgs));
 }
 
 main();
