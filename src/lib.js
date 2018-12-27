@@ -1,8 +1,5 @@
-const splitByLines = content => content.split("\n").length - 1;
-
-const splitByWords = content => content.split(/ |\n/).filter(x => x).length;
-
-const splitByBytes = content => content.split("").length;
+const {splitByLines, splitByWords, splitByBytes,
+  getTotal, joinWithTab} = require('./util.js');
 
 const getOptions = function(args) {
   let result = [];
@@ -25,19 +22,6 @@ const mapper = function(input, fs, file) {
 const getCountArray = function(filesList, userArgs, fs) {
   let getFileCounts = mapper.bind(null, userArgs, fs);
   return filesList.map(getFileCounts);
-};
-
-const getTotal = function(list1, list2) {
-  let total = [];
-  for (let index = 0; index < list1.length - 1; index++) {
-    total[index] = list1[index] + list2[index];
-  }
-  total.push("total");
-  return total;
-};
-
-const joinWithTab = function(array) {
-  return array.join("\t");
 };
 
 const wordCount = function(filesList, userArgs, fs) {
