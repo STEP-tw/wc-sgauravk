@@ -1,3 +1,0 @@
-* make wc works for single file without any argument.
- node wc.js file1
- 
