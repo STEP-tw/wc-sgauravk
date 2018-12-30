@@ -1,5 +1,5 @@
 const parseInput = function(userArgs) {
-  let filesList = userArgs.filter(x => !x.includes('-'));
+  let filesList = userArgs.filter(x => !x.startsWith('-'));
   return filesList;
 };
 
